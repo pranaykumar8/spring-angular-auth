@@ -1,0 +1,48 @@
+<!-- src/app/components/instagram/instagram.component.html -->
+<div class="form-container">
+  <h2>Instagram Signup</h2>
+  <form [formGroup]="instagramForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Surname:</label>
+      <input id="surname" formControlName="surname" required />
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input id="username" formControlName="username" required />
+    </div>
+
+    <div class="form-group">
+      <label for="mobile">Mobile:</label>
+      <input id="mobile" formControlName="mobile" required type="text" />
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input id="dob" formControlName="dob" required type="date" />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" required type="password" />
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" required type="number" />
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input id="address" formControlName="address" required />
+    </div>
+
+    <button type="submit" class="submit-button" [disabled]="instagramForm.invalid">Submit</button>
+  </form>
+</div>

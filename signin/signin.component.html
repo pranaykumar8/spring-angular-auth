@@ -1,0 +1,37 @@
+<!-- <!-- src/app/components/signin/signin.component.html -->
+<div class="login-container">
+  <div class="login-box">
+    <img class="instagram-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" />
+    <h2>Sign In</h2>
+    
+    <form [formGroup]="signinForm" (ngSubmit)="onSignin()">
+      <div class="form-group">
+        <input id="username" formControlName="username" placeholder="Username" required />
+      </div>
+
+      <div class="form-group">
+        <input id="password" formControlName="password" placeholder="Password" required type="password" />
+      </div>
+
+      <button type="submit" class="submit-button" [disabled]="signinForm.invalid">Log In</button>
+    </form>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <div class="social-login">
+      <a href="#" class="fb-login">Log in with Facebook</a>
+    </div>
+
+    <div class="forgot-password">
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>
+
+  <div class="signup-box">
+    <p>Don't have an account? <a href="/instagram">Sign up</a></p>
+  </div>
+
+  <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>
